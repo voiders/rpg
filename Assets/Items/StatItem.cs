@@ -1,5 +1,5 @@
 ﻿
-public class BaseStatItem : BaseItem {
+public class StatItem : Item {
 
   private int staminia;
   private int endurance;

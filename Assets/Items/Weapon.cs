@@ -1,5 +1,5 @@
 ﻿
-public class BaseWeapon : BaseStatItem { // BaseWeapon <- BaseStatItem -< BaseItem 
+public class Weapon : StatItem { // BaseWeapon <- BaseStatItem -< BaseItem 
   public enum WeaponTypes{
     SWORD,
     STAFF,

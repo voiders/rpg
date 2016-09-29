@@ -1,19 +1,14 @@
-﻿public class BaseCharacterClass {
-  private string characterClassName;
-  private string characterClassDescription;
+﻿public class Character {
+  private string nick;
   // states
   private int staminia;
   private int endurance;
   private int strength;
   private int intellect;
 
-  public string CharacterClassName {
-    get{return characterClassName;}
-    set{characterClassName = value;} 
-  }
-  public string CharacterClassDescription {
-    get{return characterClassDescription;}
-    set{characterClassDescription = value;} 
+  public string Nick {
+    get{ return nick; }
+    set{ nick = value; } 
   }
   public int Staminia {
     get{return staminia;}
