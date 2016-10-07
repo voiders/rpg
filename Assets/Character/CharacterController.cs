@@ -9,11 +9,20 @@ public class CharacterController : MonoBehaviour {
   private Rigidbody2D myRigibody;
   private bool moving;
   private Vector2 lastMove;
+
+  private static bool playerExist;
   // Use this for initialization
   void Start () {
     anim = GetComponent<Animator>();
     character = new Character();
     myRigibody = GetComponent<Rigidbody2D>();
+
+    if (!playerExist) {
+      playerExist = true;
+      DontDestroyOnLoad(gameObject);
+    } else {
+      Destroy(gameObject);
+    }
   }
   
   // Update is called once per frame

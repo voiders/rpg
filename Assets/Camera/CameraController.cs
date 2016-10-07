@@ -5,10 +5,16 @@ public class CameraController : MonoBehaviour {
 
   public GameObject followTarget;
   private Vector3 targetPos;
-  public float moveSpeed;
+  public float moveSpeed = 5f;
+  private static bool cameraExist;
   // Use this for initialization
   void Start () {
-    
+    if (!cameraExist) {
+      cameraExist = true;
+      DontDestroyOnLoad(gameObject);
+    } else {
+      Destroy(gameObject);
+    }
   }
   
   // Update is called once per frame
